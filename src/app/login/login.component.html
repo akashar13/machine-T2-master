@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2 col-md-4">
+
+    </div>
+    <div class="col-8 col-md-4"
+      style="margin-top:10%;">
+      <form [formGroup]="userform" (ngSubmit)=" onSubmit()" >
+        <div>
+          <div class="form-group" style="padding-bottom: 10px;">
+            <label for="username">Username</label>
+
+            <input type="text" required class="form-control input-style" formControlName="username" aria-describedby="emailHelp"
+              placeholder="Username">
+
+          </div>
+          <div class="form-group" style="padding-bottom: 10px;">
+            <label for="password">Password</label>
+
+            <input type="password" required class="form-control input-style" formControlName="password"  placeholder="Password">
+          </div>
+          <div class="form-group form-check" style="padding-bottom: 10px;">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" style="align-items: center;">
+            <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+          </div>
+          <button type="submit" style="width: 100%;margin-top: 3%;" class="btn btn-primary" [disabled]="!userform.valid">Login</button>
+          <div style="margin-top: 5%;">
+             Don't have an account?<small (click)="btnClick()" style="cursor: pointer;font-weight: 600;"> Click here </small>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+    <div class="col-2 col-md-4"></div>
+  </div>
+</div>
